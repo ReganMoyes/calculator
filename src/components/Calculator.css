@@ -1,0 +1,54 @@
+.calculator-grid {
+  display: grid;
+  margin-top: 6rem;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  justify-content: center;
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 0.1rem solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.calculator-grid > button:hover,
+.calculator-grid > button:focus {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.span-two-ac {
+  grid-column: span 2;
+}
+
+.span-two-equals {
+  grid-column: span 2;
+  border-radius: 0rem 0rem 2rem 0rem;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-family: "Chakra Petch", sans-serif;
+  border-radius: 2rem 0rem 0rem 0rem;
+}
+
+.output .previous-operand {
+  color: greenyellow;
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: greenyellow;
+  font-size: 2.5rem;
+}
